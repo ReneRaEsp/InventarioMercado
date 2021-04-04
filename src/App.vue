@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import cabecero from "./components/cabecero"
-import lateral from "./components/lateral"
-import central from "./components/central"
+import cabecero from "./components/layout/cabecero"
+import lateral from "./components/layout/lateral"
+import central from "./components/layout/central"
 export default {
   name: 'App',
   components: {

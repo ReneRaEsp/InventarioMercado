@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import frutas from "./frutas"
+import frutas from "./../frutas"
 export default {
     components: {
         frutas
