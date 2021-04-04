@@ -3,7 +3,7 @@
     <div class="agregar col-12 d-flex">
           <input class="col-4" placeholder="Inserte una fruta" type="text" v-model="frutaInput">
           <div class="col-5 m-auto">
-            <label class="col-2 m-1" for="cantidad">Cantidad: </label>
+            <label class="col-2 m-4 text-light" for="cantidad">Cantidad: </label>
             <input class="col-8" name="cantidad" placeholder="Inserte la cantidad" 
             type="number" v-model.number="cantidadInput">
           </div>
@@ -13,10 +13,10 @@
       <div class="col-8">
         <label hidden>{{index}}</label>
         <h4 class="text-info">{{fruta.nombre}}</h4>
-        <h5 class="text-info">cantidad: {{fruta.cantidad}}</h5>
-        <p v-if="fruta.cantidad <= 20" class="text-info">sin descuento</p>
-        <p v-if="fruta.cantidad > 20 && fruta.cantidad <= 50" class="text-info">Descuento: 20%</p>
-        <p v-if="fruta.cantidad > 50" class="text-info">Descuento: 50%</p>
+        <h5 class="text-secondary">cantidad: {{fruta.cantidad}}</h5>
+        <p v-if="fruta.cantidad <= 20" class="text-secondary">sin descuento</p>
+        <p v-if="fruta.cantidad > 20 && fruta.cantidad <= 50" class="text-success">Descuento: 20%</p>
+        <p v-if="fruta.cantidad > 50" class="text-success">Descuento: 50%</p>
       </div>
       <div class="col-4 botones d-flex justify-content-center flex-wrap">
         <button @click="fruta.cantidad++" class="mas col-8">+</button>
@@ -55,7 +55,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .frutas {
     padding: 0;
   }
@@ -101,7 +101,7 @@ export default {
   }
   button:hover {
     border: 3px solid  rgb(36, 168, 168);
-    background: rgba(189, 220, 233, 0.671);    
+    background: rgba(240, 251, 255, 0.781);    
     color: rgb(36, 168, 168);
   }
   .mas{

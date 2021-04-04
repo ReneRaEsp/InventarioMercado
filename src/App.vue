@@ -1,44 +1,46 @@
 <template>
-  <div class="m-auto bg-light container-fluid" id="app">
-      <cabecero class="row"/>
-      <section class="row">
-        <lateral class="col-1"/><central class="col-11"/>
-      </section>
+  <div class="bg-dark d-flex justify-content-start flex-wrap flex-row" id="app">
+    <Cabecero class="col-12"/>
+    <Lateral class="col-2"/>
+    <Central class="col-10"/>
   </div>
 </template>
 
 <script>
-import cabecero from "./components/layout/cabecero"
-import lateral from "./components/layout/lateral"
-import central from "./components/layout/central"
+import Lateral from "./components/layout/lateral.vue"
+import Cabecero from "./components/layout/cabecero.vue"
+import Central from "./components/layout/central.vue"
+
 export default {
-  name: 'App',
-  components: {
-    cabecero, lateral, central
+  components:{
+    Cabecero,
+    Lateral,
+    Central
   }
 }
+
 </script>
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background: rgb(241, 232, 232);
-  margin: 0;
-  padding: 0;
-}
-/*#app {
+
+<style lang="scss">
+#app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-  width: 1500px;
-  min-height: 650px;
-  background: rgb(175, 170, 170);
-}*/
+}
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
 </style>

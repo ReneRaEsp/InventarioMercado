@@ -1,7 +1,7 @@
 <template>
-  <aside class="aside">
+  <aside class="">
       <div v-for="item of items" :key="item.name">
-          <h5 class="col-12 item p-2 text-center"><b>{{item.name}}</b></h5>
+          <h5 class="col-12 item p-1 text-center"><router-link class="itemI text-decoration-none text-info" v-bind:to="item.link"><b class="text-light">{{item.name}}</b></router-link></h5>
       </div> 
   </aside>
 </template>
@@ -11,17 +11,17 @@ export default {
     data(){
         return {
             items: [
-                {name: "Frutas"},{name: "Carnes"},
-                {name: "Verduras"},{name: "Cereales"},
-                {name: "Limpieza"},{name: "Hogar"},
-                {name: "Jardin"}
+                {name: "Frutas", link: "/Frutas"},{name: "Carnes", link: "/Carnes"},
+                {name: "Verduras", link: "/Verduras"},{name: "Cereales", link: "/Cereales"},
+                {name: "Limpieza", link: "/Limpieza"},{name: "Hogar", link: "/Hogar"},
+                {name: "Jardin", link: "/Jardin"}
             ]
         }
     }
 }
 </script>
 
-<style>
+<style scoped>
     .aside {
         border-top: 0px solid rgb(36, 168, 168);
         border-left: 3px solid rgb(36, 168, 168);
@@ -43,5 +43,8 @@ export default {
     .item:hover{
         background: rgba(13, 113, 126, 0.664);
         color: rgb(188, 221, 255);
+    }
+    .itemI:hover{
+        color: rgb(60, 154, 241);
     }
 </style>

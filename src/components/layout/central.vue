@@ -1,15 +1,13 @@
 <template>
   <main class="principal">
-      <frutas/>
+      <router-view/>
   </main>
 </template>
 
 <script>
-import frutas from "./../frutas"
+
 export default {
-    components: {
-        frutas
-    }
+    
 }
 </script>
 
